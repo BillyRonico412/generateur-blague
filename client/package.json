@@ -9,14 +9,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tanstack/react-query": "^4.29.11",
-    "@tanstack/react-query-devtools": "^4.29.11",
     "@trpc/client": "^10.28.0",
-    "@trpc/react-query": "^10.28.0",
     "@trpc/server": "^10.28.0",
+    "@xstate/cli": "^0.5.2",
+    "@xstate/inspect": "^0.8.0",
+    "@xstate/react": "^3.2.2",
+    "await-to-js": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.11.2"
+    "react-router-dom": "^6.11.2",
+    "xstate": "^4.38.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
