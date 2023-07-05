@@ -60,14 +60,14 @@ export const machine = createMachine({
 				src: async (context) => {
 					const token = localStorage.getItem("token")
 					if (token) {
-						const loginByToken = await trpc.loginByToken.query(token)
+						const loginByToken = await trpc.loginByToken.mutate(token)
 						if (!loginByToken) {
 							throw new Error("Invalid token")
 						}
 						return token
 					}
 					if (context.password) {
-						return await trpc.loginByPassword.query(context.password)
+						return await trpc.loginByPassword.mutate(context.password)
 					}
 					throw new Error("No password")
 				},

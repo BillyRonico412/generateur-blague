@@ -69,17 +69,19 @@ const generateJoke = async (
 }
 
 const appRouter = router({
-	loginByToken: publicProcedure.input(z.string()).query(async ({ input }) => {
-		try {
-			jwt.verify(input, env.JWT_SECRET)
-			return true
-		} catch {
-			return false
-		}
-	}),
+	loginByToken: publicProcedure
+		.input(z.string())
+		.mutation(async ({ input }) => {
+			try {
+				jwt.verify(input, env.JWT_SECRET)
+				return true
+			} catch {
+				return false
+			}
+		}),
 	loginByPassword: publicProcedure
 		.input(z.string())
-		.query(async ({ input }) => {
+		.mutation(async ({ input }) => {
 			if (input !== env.PASSWORD) {
 				throw new TRPCError({
 					code: "UNAUTHORIZED",
