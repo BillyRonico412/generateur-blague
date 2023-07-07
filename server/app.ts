@@ -10,6 +10,8 @@ import { TRPCError } from "@trpc/server"
 import { createContext } from "./context"
 import jwt from "jsonwebtoken"
 
+console.log("Starting server...")
+
 dotenv.config()
 
 const env = zodEnv.parse(process.env)
