@@ -121,6 +121,8 @@ const server = createHTTPServer({
 	createContext,
 })
 
-server.listen(Number(env.PORT))
+const listen = server.listen(Number(env.PORT))
+
+console.log(`Listening on port ${listen.port}`)
 
 export type AppRouter = typeof appRouter
