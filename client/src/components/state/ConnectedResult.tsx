@@ -1,7 +1,7 @@
 interface Props {
-	result: string
-	onClickUneAutre: () => void
-	onClickNouvelleBlague: () => void
+	result: string;
+	onClickUneAutre: () => void;
+	onClickNouvelleBlague: () => void;
 }
 
 const ConnectedResult = (props: Props) => {
@@ -13,7 +13,7 @@ const ConnectedResult = (props: Props) => {
 					type="button"
 					className="btn w-[300px] ml-auto"
 					onClick={() => {
-						props.onClickUneAutre()
+						props.onClickUneAutre();
 					}}
 				>
 					Une autre
@@ -22,14 +22,14 @@ const ConnectedResult = (props: Props) => {
 					type="button"
 					className="btn w-[300px] mr-auto"
 					onClick={() => {
-						props.onClickNouvelleBlague()
+						props.onClickNouvelleBlague();
 					}}
 				>
 					Nouvelle blague
 				</button>
 			</div>
 		</>
-	)
-}
+	);
+};
 
-export default ConnectedResult
+export default ConnectedResult;
